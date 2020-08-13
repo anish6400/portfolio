@@ -1,0 +1,28 @@
+.textWrap {
+  height: 3rem;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.text {
+  display: block;
+  height: 3rem;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  border: none;
+  font-family: "Staatliches", sans-serif;
+  line-height: 1;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  color: white;
+}
+
+.textWrap:hover > .textUp {
+  transform: translateY(-3rem);
+}
+
+.textWrap:hover > .textDown {
+  transform: translateY(-3rem);
+}

@@ -1,0 +1,38 @@
+.wrapper {
+  height: 2.5rem;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.buttonProp {
+  outline: none;
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  border: 3px white solid;
+  font-family: "Staatliches", sans-serif;
+  line-height: 1;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  padding: 0px 20px;
+}
+
+.buttonUp {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+.buttonDown {
+  background-color: white;
+  color: #22262a;
+}
+
+.wrapper:hover > .buttonUp {
+  transform: translateY(-2.5rem);
+}
+
+.wrapper:hover > .buttonDown {
+  transform: translateY(-2.5rem);
+}

@@ -1,0 +1,183 @@
+.mainWrapper {
+  text-align: center;
+  user-select: none;
+}
+
+.content {
+  margin: auto;
+  width: 90%;
+}
+
+.title {
+  font-size: 50px;
+  font-family: "Staatliches", sans-serif;
+  color: white;
+  animation: 1s ease-out 0s 1 fade;
+}
+
+.subtitle {
+  font-family: "Inconsolata", monospace;
+  color: #94a4b4;
+  animation: 1s ease-out 0s 1 fade;
+}
+
+main {
+  margin: 30px auto;
+  width: 100%;
+  display: grid;
+  /* Define Auto Row size */
+  grid-auto-rows: calc(80vw * 12 / 16);
+  /*Define our columns */
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  grid-gap: 3em;
+  animation: 0.8s ease-out 0s 1 leftToRight;
+}
+
+.box {
+  color: #fff;
+  background-color: #222327;
+  box-shadow: 0 0 10px #000;
+  position: relative;
+}
+
+.box:hover {
+  box-shadow: 0 0 20px #000;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  box-shadow: 0 0 5px #000;
+  flex-direction: column;
+}
+
+.imgElement {
+  width: 70%;
+  margin: auto;
+}
+
+.links {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  box-shadow: 0 0 5px #000;
+  text-align: center;
+}
+
+.linkButton {
+  width: 40%;
+  height: 80%;
+  margin: auto;
+  font-family: "Staatliches";
+  background-color: #94a4b4;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #222620;
+}
+
+.linkButton:hover {
+  background-color: #fff;
+}
+
+.descriptionBox {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+  height: 100%;
+  text-align: left;
+}
+
+.projectTitle {
+  padding: 10px 0px 5px 15px;
+  font-family: "Staatliches";
+  font-size: 1rem;
+}
+
+.tags {
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  padding: 2px;
+  border: 1px solid #222620;
+  color: #94a4b4;
+  font-family: "Staatliches";
+  font-size: 0.6rem;
+  filter: brightness(150%);
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.description {
+  font-size: 0.8rem;
+  padding: 5px 15px;
+  overflow: auto;
+  flex: 1 1 auto;
+  margin-bottom: 10px;
+  color: #94a4b4;
+}
+
+p {
+  margin-top: 0;
+  font-size: 0.7rem;
+  font-family: "Inconsolata", monospace;
+}
+
+@media screen and (min-width: 760px) {
+  main {
+    grid-auto-rows: calc(40vw * 10 / 16);
+    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+    font-size: 0.4rem;
+  }
+
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+
+  .tag {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .linkButton {
+    width: 30%;
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes leftToRight {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 100%;
+  }
+}
