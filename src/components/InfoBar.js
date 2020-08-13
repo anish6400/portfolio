@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import "../styles/InfoBar.css";
+import { Link } from "react-router-dom";
 
 class InfoBar extends Component {
   render() {
@@ -42,20 +43,23 @@ class InfoBar extends Component {
             Github
           </button>
         </span>
-        <span className="textWrap">
-          <button
-            className="textUp text"
-            style={{ backgroundColor: "#6fc2b0" }}
-          >
-            <FontAwesomeIcon icon={faEnvelope} size="2x" />
-          </button>
-          <button
-            className="textDown text"
-            style={{ backgroundColor: "#6fc2b0" }}
-          >
-            Email
-          </button>
-        </span>
+        <Link to="/contact">
+          <span className="textWrap">
+            <button
+              className="textUp text"
+              style={{ backgroundColor: "#6fc2b0" }}
+            >
+              <FontAwesomeIcon icon={faEnvelope} size="2x" />
+            </button>
+            <button
+              className="textDown text"
+              style={{ backgroundColor: "#6fc2b0" }}
+            >
+              Contact
+            </button>
+          </span>
+        </Link>
+
         <span className="textWrap">
           <button
             className="textUp text"

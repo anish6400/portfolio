@@ -19,3 +19,26 @@ html {
   background: #97bfd3;
   border-radius: 10px;
 }
+
+@keyframes fade {
+  0% {
+    transform: translateZ(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes leftToRight {
+  0% {
+    transform: translateZ(0);
+    transform: translateY(100px);
+    transform: translate3d(0);
+  }
+  100% {
+    transform: translateZ(0);
+    transform: translate3d(0);
+    transform: translateY(0);
+  }
+}

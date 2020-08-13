@@ -5,6 +5,7 @@
 }
 
 .text {
+  outline: none;
   display: block;
   height: 3rem;
   width: 100%;
