@@ -33,7 +33,7 @@ class InfoBar extends Component {
           className="textWrap"
           onClick={(e) => {
             e.preventDefault();
-            window.open("http://github.com/AnishKumar0285", "blank");
+            window.open("http://github.com/anish0285", "blank");
           }}
         >
           <button className="textUp text" style={{ backgroundColor: "#333" }}>
@@ -60,7 +60,16 @@ class InfoBar extends Component {
           </span>
         </Link>
 
-        <span className="textWrap">
+        <span
+          className="textWrap"
+          onClick={(e) => {
+            e.preventDefault();
+            window.open(
+              "https://drive.google.com/file/d/1kt5qWu3DF_neOAqGfYwTuNKRDu_6gk5v/view?usp=sharing",
+              "blank"
+            );
+          }}
+        >
           <button
             className="textUp text"
             style={{ backgroundColor: "#565f69" }}

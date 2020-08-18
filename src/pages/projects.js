@@ -26,7 +26,7 @@ class about extends Component {
               p1="For this project I worked with nodejs, express and firebase to make a backend and REST API and used to react to make a single page application."
               p2="The idea was to make a twitter clone which would include all the fundamentals on which twitter is based upon like making a post, adding a comment, user authentication, likes, notifications."
               p3="Even though the project is not even close to what existing twitter is but still it helped me feel more confident with my development skills."
-              toCode="http://github.com/AnishKumar0285/callofweb"
+              toCode="http://github.com/anish0285/callofweb"
               toSite="http://www.callofweb.com"
             />
             <Box
@@ -36,7 +36,7 @@ class about extends Component {
               p1="Through this project I aimed to make myself more familiar with the syntax and working of javascript."
               p2="The game was meant to be a 2d multiplayer shooter game where users can jump, shoot and kill each other. For this I used a popular and well documented library called pixijs."
               p3="I learned a lot of stuff as I have to code basic physics concepts like collissions and gravity. Currently i have been able to implement only the single player mode which you can checkout below."
-              toCode="http://github.com/AnishKumar0285/madshot.io"
+              toCode="http://github.com/anish0285/madshot.io"
               toSite="http://madshot.web.app"
             />
             <Box
@@ -45,7 +45,7 @@ class about extends Component {
               tagNames="RESPONSIVE, HTML & CSS, REACT.JS, UI/UX"
               p1="The idea behind this project was to create a showcase of all my projects which I have worked on. I tried to keep the UI as simple as possible without any fluff."
               p2="This is a Single Page Application and is built using React.js and CSS."
-              toCode="http://github.com/AnishKumar0285/portfolio"
+              toCode="http://github.com/anish0285/portfolio"
               toSite="/"
             />
           </main>
