@@ -5,6 +5,7 @@ import Box from "../components/Box";
 import gameLogo from "../assets/shootingGame.svg";
 import portfolioLogo from "../assets/portfolioLogo.svg";
 import twitterCloneLogo from "../assets/twitterCloneLogo.svg";
+import codeniteLogo from "../assets/codeniteLogo.svg";
 
 class about extends Component {
   render() {
@@ -19,6 +20,16 @@ class about extends Component {
             // Have a look at some of the projects I have been working on.
           </div>
           <main>
+            <Box
+              logo={codeniteLogo}
+              title="Codenite.io"
+              tagNames="NODE.JS, EXPRESS.JS, MONGODB, HTML & CSS, REACT.JS, AWS, EC2, REST API, PYHTON, FLASK"
+              p1="This web app contains some interesting and brainstorming programming questions which can written and executed within the app."
+              p2="For this project I used Python to compile and get the output of the code, express to communicate to react app and mongodb to store all the data. This project is deployed on an ec2 instance of ubuntu."
+              p3="Through this project I was able to learn a lot of new technologies like flask, mongodb and amazon ec2. Do check it out below."
+              toCode="http://github.com/anish0285/codenite-frontend"
+              toSite="http://www.codenite.io"
+            />
             <Box
               logo={twitterCloneLogo}
               title="Twitter Clone"
