@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import emailjs from "emailjs-com";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/contact.css";
-import { Link } from "react-router-dom";
 
 class contact extends Component {
   state = {
@@ -12,6 +9,7 @@ class contact extends Component {
   };
   sendEmail = (e) => {
     e.preventDefault();
+    this.setState({ message: { ok: "Working on it..." } });
     if (
       document.getElementsByClassName("nameField")[0].value === "" ||
       document.getElementsByClassName("emailField")[0].value === "" ||
@@ -21,26 +19,34 @@ class contact extends Component {
       return false;
     }
 
+     var tempParams = {
+        name: document.getElementsByClassName("nameField")[0].value,
+        email: document.getElementsByClassName("emailField")[0].value,
+        number: document.getElementsByClassName("numberField")[0].value,
+        site: document.getElementsByClassName("siteField")[0].value,
+        message: document.getElementsByClassName("messageField")[0].value
+    }
+
     emailjs
-      .sendForm("gmail", "portfolio", e.target, "user_iU934zVMw2b55HNpteObP")
+      .send("gmail", "portfolio", tempParams, "user_iU934zVMw2b55HNpteObP")
       .then(
         (result) => {
           this.setState({ message: { ok: "Message sent successfully." } });
         },
         (error) => {
           this.setState({ message: { error: "Something went wrong." } });
+          console.log(error);
         }
       );
   };
+  back = (e) => {
+    e.preventDefault();
+    window.history.back();
+  }
   render() {
     return (
       <div className="bigWrapper">
-        <Link to="/">
-          <button className="backButton">
-            <FontAwesomeIcon icon={faAngleLeft} /> Back
-          </button>
-        </Link>
-        <form className="container" onSubmit={this.sendEmail}>
+        <form className="container">
           <div className="headerInfo">Contact Me</div>
           <input
             className="field nameField"
@@ -71,7 +77,10 @@ class contact extends Component {
             name="message"
             placeholder="Type your message here"
           />
-          <input className="field submitButton" type="submit" value="Send" />
+          <div className="buttonWrapper">
+          <button className="field formButton" onClick={this.back}> Back </button> 
+          <button className="field formButton" onClick={this.sendEmail}> Send </button>
+          </div>
           {this.state.message ? (
             this.state.message.error ? (
               <div className="error">{this.state.message.error}</div>

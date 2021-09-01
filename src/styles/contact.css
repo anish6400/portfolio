@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 10px;
+  justify-content: center;
+  height: 100vh;
 }
 .container {
   max-width: 400px;
@@ -11,7 +12,6 @@
   flex-direction: column;
   padding: 20px;
   border: 1px solid #94a4b4;
-  margin: 5px;
 }
 
 .headerInfo {
@@ -22,6 +22,7 @@
 
 .field {
   font-family: "Inconsolata", monospace;
+  resize: vertical;
   outline: none;
   border: none;
   margin-top: 10px;
@@ -29,13 +30,21 @@
   font-size: 1.2rem;
 }
 
-.submitButton {
+.buttonWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.formButton {
   background-color: #94a4b4;
   color: #222327;
   font-family: "Staatliches";
+  flex-grow: 1;
+  margin: 10px;
 }
 
-.submitButton:hover {
+
+.formButton:hover {
   cursor: pointer;
   background-color: white;
 }
@@ -48,20 +57,6 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.backButton {
-  left: 0;
-  top: 0;
-  margin: 10px;
-  position: absolute;
-  color: white;
-  border: none;
-  outline: none;
-  font-family: "Staatliches";
-  background-color: #222327;
-  cursor: pointer;
-  font-size: 1.25rem;
 }
 
 .error {

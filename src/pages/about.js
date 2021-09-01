@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import Projects from "../components/Projects";
 import "../styles/about.css";
 import { Link } from "react-router-dom";
 import InfoBar from "../components/InfoBar";
-import Button from "../components/Button";
 
 class about extends Component {
   render() {
@@ -17,14 +17,12 @@ class about extends Component {
           </div>
           <div className="about">
             <span>
-              I am a software developer currently based in Vancouver, BC.
+              I am a software developer currently based in Vancouver, BC.&nbsp; 
             </span>
-            <span>Have a look at my portfolio</span>
+            <span> Have a look at my portfolio</span>
           </div>
-          <div style={{ display: "inline-block", marginTop: "50px" }}>
-            <Link to="/projects">
-              <Button text="View Projects > " />
-            </Link>
+          <div style={{ marginTop: "50px" }}>
+            <Projects />
           </div>
         </div>
         <div className="info">
